@@ -40,6 +40,7 @@ class Blog extends CI_Controller {
 
         if($this->form_validation->run() === TRUE){
             $data['title'] = $this->input->post('title');
+            $data['ringkasan'] = $this->input->post('ringkasan');
             $data['content'] = $this->input->post('content');
             $data['url'] = $this->input->post('url');
 
@@ -85,6 +86,7 @@ class Blog extends CI_Controller {
 
         if($this->form_validation->run() === TRUE){
             $post['title'] = $this->input->post('title');
+            $data['ringkasan'] = $this->input->post('ringkasan');
             $post['content'] = $this->input->post('content');
             $post['url'] = $this->input->post('url');
 

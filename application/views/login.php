@@ -26,7 +26,7 @@
                         <input type="password" name="password" class="form-control">
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Masuk</button>
+                    <button type="submit" class="btn btn-primary mt-3 rounded">Masuk</button>
 
                 </div>
             </div>

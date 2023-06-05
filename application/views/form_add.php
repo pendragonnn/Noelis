@@ -27,6 +27,10 @@
                             <?= form_input('url', set_value('url'), 'class="form-control"');?>
                         </div>
                         <div class="form-group mb-2">
+                            <label>Ringkasan</label>
+                            <?= form_input('ringkasan', set_value('ringkasan'), 'class="form-control"');?>
+                        </div>
+                        <div class="form-group mb-2">
                             <label>Konten</label>
                             <?=form_textarea('content', set_value('content'), 'class="form-control"')?>
                         </div>

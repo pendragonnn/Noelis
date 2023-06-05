@@ -17,22 +17,22 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <?= $this->session->flashdata('message');?>
                     <form>
-                        <input type="text" name="find">
+                        <input type="text" name="find" placeholder="Cari Judul Artikel">
                         <button type="submit">Cari</button>
                     </form>
                     <!-- Post preview-->
                     <?php foreach($blogs as $key=>$blog):?>
                     <div class="post-preview">
                         <a href="<?=site_url('blog/detail/'.$blog['url'])?>">
-                            <h2 class="post-title"><?=$blog['title']?></h2>
+                            <h2 class="post-title text-primary"><?=$blog['title']?></h2>
                         </a>
                         <p class="post-meta">
                             Terbit pada : 
                             <?=$blog['date'];?>
-                            <p><?=$blog['content'];?></p>
+                            <p>Ringkasan : <?=$blog['ringkasan'];?></p>
                             <?php if(isset($_SESSION['username'])):?>
-                                <a href="<?=site_url('blog/edit/'.$blog['id'])?>">Modifikasi</a>
-                                <a href="<?=site_url('blog/delete/'.$blog['id'])?>" onclick="return confirm('Hapus Artikel Ini?')">Hapus</a>
+                                <a class="text-success mr-3" href="<?=site_url('blog/edit/'.$blog['id'])?>">Modifikasi</a>
+                                <a class="text-danger" href="<?=site_url('blog/delete/'.$blog['id'])?>" onclick="return confirm('Hapus Artikel Ini?')">Hapus</a>
                             <?php endif?>
                         </p>
                     </div>
